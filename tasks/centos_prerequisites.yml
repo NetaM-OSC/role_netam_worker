@@ -1,0 +1,12 @@
+---
+- name: centos_prerequisites | stats dnf
+  stat:
+    path: /usr/bin/dnf
+  register: dnf_binary
+
+- name: centos_prerequisites | install dnf
+  yum:
+    update_cache: yes
+    name: dnf
+    state: present
+  when: dnf_binary.stat.exists

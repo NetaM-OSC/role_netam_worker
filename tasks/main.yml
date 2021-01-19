@@ -1,0 +1,6 @@
+---
+- name: import check os
+  import_tasks: check_os.yml
+
+- name: import centos prerequisites
+  import_tasks: centos_prerequisites.yml
