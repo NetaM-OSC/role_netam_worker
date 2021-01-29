@@ -1,4 +1,5 @@
 ---
+# @todo feature: Write all role
 - name: import check os
   import_tasks: check_os.yml
 
